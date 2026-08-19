@@ -233,3 +233,42 @@ html, body {
     gap: 10px;
 }
 
+
+#About {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0 20px;
+    background: linear-gradient(90deg, #F7F7F7 50%, #ffffff 50%);; /* Turn off the full-width background */
+    width: 100%;
+    height: auto;
+}
+
+.about-container {
+    display: grid;
+    width: 1375px;
+    grid-template-columns: 1fr 1.2fr; /* Left text box, right images */
+    align-items: center;
+    gap: 50px;
+}
+
+ 
+
+.image-column {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.image-column img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+.image-column > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
