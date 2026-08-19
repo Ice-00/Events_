@@ -7,7 +7,7 @@ html, body {
 }
 
 .home-sec{
-    background: linear-gradient(135deg, rgba(34, 18, 93, 0.85) 0%, rgba(225, 48, 108, 0.85) 100%), url('images/pexels-wendy-wei-1190297.jpg');
+    background: linear-gradient(135deg, rgba(38, 15, 124, 0.85) 10%, rgba(229, 36, 155, 0.9) 60%), url('images/pexels-wendy-wei-1190297.jpg');
     height:735px;
     background-size: cover;
     background-position: center;
@@ -73,8 +73,8 @@ html, body {
 
 /* Container for the text content inside the hero section */
 .home-content {
-    max-width: 1200px;
-    margin: 148px auto 0 auto; /* Pushes the text down below your header */
+    max-width: 2000px;
+    margin: 148px 400px; /* Pushes the text down below your header */
     padding: 0 20px;
 }
 
@@ -91,12 +91,13 @@ html, body {
 
 /* Massive main headline */
 .home-content h1 {
-    font-size: 3.5rem;
+  font-size: 3.8rem; /* Scaled down slightly from 3.5rem so it fits better */
     font-weight: 800;
-    line-height: 1.1;
+    line-height: 1.15;
     color: #ffffff;
-    margin: 0 0 20px 0;
+    margin: 0 20px 20px 0;
     text-transform: uppercase;
+    max-width: 2000px; /* Forces words to wrap cleanly before hitting the image */
 }
 
 /* Descriptive paragraph text */
@@ -109,4 +110,126 @@ html, body {
 }
 
 
+.hero-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    padding: 0 20px;
+}
+
+/* Resets home-content to fit inside the flex wrapper */
+.home-content {
+    max-width: 600px;
+    margin: 130px 10px; /* Clears out old margins */
+    padding: 0;
+}
+
+.hero-image{
+    max-width: fit-content;
+}
+/* Styles the speaker image container */
+.hero-image img     {
+    max-width: 539px; /* Adjust size to fit your template */
+    height: 60%;
+    display: block;
+    object-fit: cover;
+}
+
+.countdown{
+    background-color: #F8669E;
+    height: 162px;
+    width:1144px;
+    margin-top: -50px;
+}
+
+
+
+
+/* Main section container */
+.join {
+    max-width: 1200px;
+    margin: 200px auto;
+    padding: 0 20px;
+}
+
+/* 2-Column Grid: Left side for cards, Right side for text */
+.join-content {
+    display: grid;
+    height: 650px;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+/* Left card wrapper layout */
+.card-column {
+    position: relative;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+/* Left vertical stack of two cards */
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex: 1;
+}
+
+/* Individual Card Styling */
+.card1, .card2, .card3 {
+    background: #ffffff;
+    padding: 35px 30px;
+    border-radius: 6px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+    border-top: 3px solid transparent;
+}
+
+/* Stagger the middle card (Digital Marketing) to overlap to the right */
+.card3 {
+    position: relative;
+    right: 20px;
+    z-index: 2; /* Keeps it layered cleanly on top */
+}
+
+/* Right side text block styling */
+.join-text {
+    grid-column: 2;
+}
+
+.join-text h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #22125d;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.join-text h2 span {
+    color: #e1306c;
+}
+
+.join-text p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Button style matching the template */
+.join-text button {
+    background-color: #e1306c;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
 
