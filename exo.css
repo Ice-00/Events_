@@ -144,6 +144,23 @@ html, body {
     margin-top: -50px;
 }
 
+.countdown-metrics{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;   
+    margin-top:0px;
+}
+
+.countdown-metrics div{
+    color: #fdfdff;
+    font-size: 56px;
+}
+
+.countdown-metrics p{
+    margin-top: 1px ;
+    font-size: 16px;
+}
 
 
 
@@ -235,29 +252,47 @@ html, body {
 
 
 #About {
+    position: relative; /* Needed so the background box can lock to it */
     max-width: 1200px;
     margin: 100px auto;
+    height: 928px;
     padding: 0 20px;
-    background: linear-gradient(90deg, #F7F7F7 50%, #ffffff 50%);; /* Turn off the full-width background */
-    width: 100%;
-    height: auto;
+    background-color: transparent;
+}
+
+
+#About::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: calc((100vw - 100%) / -2); /* Pulls the background all the way to the left browser edge */
+    width: 50vw; /* Covers exactly half of the screen width */
+    height: 100%;
+    background-color: #F7F7F7;
+    z-index: -1; /* Puts the background safely behind your text */
 }
 
 .about-container {
     display: grid;
-    width: 1375px;
-    grid-template-columns: 1fr 1.2fr; /* Left text box, right images */
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 50px;
 }
 
- 
+.about-text {
+    padding: 60px 0; /* No background needed here anymore, the pseudo-element handles it */
+}
 
 .image-column {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
     gap: 20px;
     align-items: center;
+
+    background-image: url('images/contentbg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .image-column img {
@@ -271,4 +306,241 @@ html, body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+
+    .discover{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background-color: #F8669E;
+    height: 53px;
+    width:142px;
+    padding: 11px 20px;
+    color:#ffffff;
+    cursor: pointer;
+    font-size: 15px;
+    border: none;
+    white-space: nowrap;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3 ease-in-out;
+    background: linear-gradient(to left, #F8669E 50%, #012d7a 50%);
+    background-size: 200% 100%; 
+    background-position: right bottom; 
+    transition: background-position 0.4s ease-in-out;
+}
+
+
+.discover:hover{
+   
+    background-position: left bottom;
+}
+
+.metric{
+    height: 252px;
+}
+
+.metrics{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 210px;   
+    margin:0px;
+}
+
+.metrics div{
+    color: #333369;
+    font-size: 56px;
+}
+
+.metrics p{
+    margin-top: 1px ;
+    font-size: 16px;
+}
+
+#schedule{
+    height: 1300px;
+}
+
+.schedule-content{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.schedule-header {
+    position: relative; 
+    margin-bottom: 10px;
+    margin-left: 400px;
+}
+
+
+.schedule-header .bg-text {
+    position: absolute;
+    top: -30px; 
+    left: 0;
+    font-size: 7rem; 
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.03); 
+    z-index: 0;
+    pointer-events: none; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+.schedule-header h5, 
+.schedule-header h2 {
+    position: relative;
+    z-index: 1;
+}
+
+.schedule-items {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+    margin-left: 400px;
+    border-radius: 0px;
+    overflow: hidden;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Left Pink Time Block */
+.event-item {
+    background-color: #e1306c;
+    color: white;
+    padding: 40px 30px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch; /* Makes it match the card's height */
+}
+
+.event-item span {
+    font-size: 0.85rem;
+    opacity: 0.9;
+    margin-bottom: 8px;
+}
+
+.event-item h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+/* Middle Details */
+.event-details {
+    padding: 30px;
+    flex-grow: 4; /* Takes up all the middle space */
+}
+
+.event-details h3 {
+    color: #22125d;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.event-details p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.event-location {
+    display: flex;
+    gap: 20px;
+    font-size: 0.85rem;
+    color: #888;
+    
+}
+
+/* Right Speaker Section */
+.event-speaker {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 30px;
+    border-left: 1px solid #eee;
+    width: 250px;
+    flex-shrink: 0;
+    align-self: stretch;
+}
+
+.event-speaker img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.event-speaker h4 {
+    color: #e1306c;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.event-speaker p {
+    color: #888;
+    font-size: 0.8rem;
+    margin-top: 0px;
+}
+
+#speakers{
+    max-height: 1234px;
+    width: 100%;
+}
+
+.speaker-header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.speaker-header .sp-text {
+   position: absolute;
+    top: 40%; /* Moves it vertically to the middle */
+    left: 50%; /* Moves it horizontally to the center of the container */
+    transform: translate(-50%, -50%); /* Shifts it back so its exact center aligns with the middle */
+    font-size: 130px; /* Adjust size if it's too big for the container */
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.03); /* Faint watermark effect */
+    z-index: 0; 
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    white-space: nowrap; /* Keeps the word on a single line */
+}
+
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px; 
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.stacked-col {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+}
+
+
+.image-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 8px solid #fffefe;
 }
