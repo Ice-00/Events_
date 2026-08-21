@@ -544,3 +544,32 @@ html, body {
     display: block;
     border: 8px solid #fffefe;
 }
+
+
+.view-speaker{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background-color: #F8669E;
+    height: 40px;
+    width:160px;
+    padding: 5px 10px;
+    color:#ffffff;
+    cursor: pointer;
+    font-size: 15px;
+    margin-left: 850px;
+    margin-top: 10px;
+    border: none;
+    white-space: nowrap;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3 ease-in-out;
+    background: linear-gradient(to left, #F8669E 50%, #012d7a 50%);
+    background-size: 200% 100%; 
+    background-position: right bottom; 
+    transition: background-position 0.4s ease-in-out;
+}
+
+.view-speaker::hover{
+    background-position: left bottom;
+}
