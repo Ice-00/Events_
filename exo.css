@@ -309,7 +309,7 @@ html, body {
 }
 
 
-    .discover{
+.discover{
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -491,8 +491,11 @@ html, body {
     margin-top: 0px;
 }
 
+
+
+
 #speakers{
-    max-height: 1234px;
+    max-height: 1394px;
     width: 100%;
 }
 
@@ -519,30 +522,36 @@ html, body {
     white-space: nowrap; /* Keeps the word on a single line */
 }
 
-
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
-    gap: 30px; 
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    margin-bottom: 20px;
 }
-
 
 .stacked-col {
     display: flex;
     flex-direction: column;
-    gap: 30px; 
+    gap: 25px;
 }
 
 
-.image-grid img {
+.img-card {
+    background: #ffffff;
+    padding: 12px; 
+    border-radius: 6px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); 
+}
+
+.img-card img {
     width: 100%;
     height: auto;
     display: block;
-    border: 8px solid #fffefe;
+    border: none; 
 }
 
 
@@ -551,25 +560,181 @@ html, body {
     align-items: center;
     justify-content: center;
     gap: 12px;
-    background-color: #F8669E;
     height: 40px;
-    width:160px;
-    padding: 5px 10px;
-    color:#ffffff;
+    width: 200px;
+    padding-bottom: 0px;
+    color: #ffffff;
     cursor: pointer;
     font-size: 15px;
-    margin-left: 850px;
-    margin-top: 10px;
     border: none;
     white-space: nowrap;
     box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
-    transition: background-color 0.3 ease-in-out;
+    margin-left: 850px;
+    margin-bottom: 20px;
+
     background: linear-gradient(to left, #F8669E 50%, #012d7a 50%);
-    background-size: 200% 100%; 
-    background-position: right bottom; 
+    background-size: 200% 100%;
+    background-position: right bottom;
     transition: background-position 0.4s ease-in-out;
 }
 
-.view-speaker::hover{
+.view-speaker:hover{
     background-position: left bottom;
+}
+
+
+
+.pricing-sec {
+    margin-top: 100px;
+    padding: 100px 20px;
+    background-color:#120000;
+    text-align: center;
+}
+
+.pricing-header {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.pricing-header .bg-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 7rem;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.03);
+    z-index: 0;
+    pointer-events: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.pricing-header h5, 
+.pricing-header h2 {
+    position: relative;
+    z-index: 1;
+}
+
+/* Pricing Grid Layout */
+.pricing-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* Base Price Card Style */
+.price-card {
+    background: #ffffff;
+    height:721px;
+    width:411px;
+    text-align: center;
+    border: 1px solid #eee;
+    padding: 10px 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+    
+}
+
+/* Highlighted Middle Card (Silver) */
+.price-card.featured {
+    background-color: #333369; /* Dark Navy/Purple */
+    color: #ffffff;
+    border: none;
+    transform: scale(1.03); /* Slightly taller/larger than the others */
+    z-index: 2;
+}
+
+.price-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.package-type {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.price-card.featured .package-type {
+    color: #ccc;
+}
+
+.price {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #F8669E; /* Pink pricing color */
+    margin-bottom: 5px;
+}
+
+.person {
+    font-size: 16px;
+    color: #888;
+    margin-bottom:-20px;
+    
+}
+
+.price-card.featured .person {
+    color: #ccc;
+}
+
+/* Feature List */
+.features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.features li {
+    padding: 12px 0;
+    border-bottom: 1px dashed #eee;
+    font-size: 16px;
+    color: #555;
+    margin-top:3px;
+}
+
+.price-card.featured .features li {
+    color: #ddd;
+    border-bottom: 1px dashed rgba(255,255,255,0.1);
+}
+
+.purchase-btn {
+    color: white;
+    height: 51px;
+    width: 120px;
+    border: none;
+    outline: none; 
+    margin-left: 150px;
+    padding: 12px 0;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 15px;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
+    background: linear-gradient(to left, #F8669E 50%, #012d7a 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: background-position 0.4s ease-in-out;
+}
+
+.purchase-btn:hover {
+    background-position: left bottom; /* Make sure this is background-position, not background-color */
+}
+
+.terms {
+    font-size:21px;
+    color: #999;
+}
+
+.price-card.featured .terms {
+    color: #aaa;
 }
