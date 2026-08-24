@@ -752,7 +752,7 @@ html, body {
     background-position: center;
     padding: 100px 20px;
     color: #ffffff;
-    margin-bottom: 200px;
+    margin-bottom: 0px;
     text-align: center;
 }
 
@@ -825,7 +825,7 @@ html, body {
 .event-card.small-card {
     display: flex;
     align-items: center;
-    background: rgba(255, 255, 255, 0.25); /* Semi-transparent glass effect */
+    background: rgba(255, 255, 255, 0.25); 
     backdrop-filter: blur(10px);
     overflow: hidden;
     width: 100%;
@@ -850,13 +850,13 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%; /* Spans the width of its parent box so it can center properly */
+    width: 100%; 
     height: 100%;
 }
 .custom-icon {
-    width: 40px;  /* Forces a much larger base size */
+    width: 40px;  
     height: 40px;
-    transform: scale(1.5); /* Scales it up even further if needed */
+    transform: scale(1.5); 
 }
 
 /* Card 1 Left Block (Pink) */
@@ -872,15 +872,15 @@ html, body {
 /* Card 2 Left Block (White) */
 .event-card.small-card .event-time.white-time {
     background-color: #ffffff;
-    color: #F8669E; /* Pink accent text for time */
+    color: #F8669E; 
 }
 
 .event-card.small-card .event-time.white-time span {
-    color: #888888; /* Softer grey for the time range text */
+    color: #888888; 
 }
 
 .event-card.small-card .event-time.white-time h3 {
-    color: #22125d; /* Dark navy for the title so it pops on white */
+    color: #22125d; 
 }
 
 .event-card.small-card .event-time.pink-time .white-time p{
@@ -888,12 +888,12 @@ html, body {
 }
 
 .event-card.small-card .event-details p {
-    color: #ffffff; /* Sets the text color to white */
+    color: #ffffff; 
     font-size: 0.85rem;
     line-height: 1.4;
     margin: 0;
 }
-/* Bottom Showcase Card */
+
 .expo-showcase {
     max-width: 972px;
     margin: 0 auto;
@@ -902,7 +902,7 @@ html, body {
 .showcase-card {
     position: relative;
     background: #ffffff;
-    padding: 7px; /* Creates the white border frame */
+    padding: 7px; 
     box-shadow: 0 20px 40px rgba(0,0,0,0.3);
 }
 
@@ -912,7 +912,7 @@ html, body {
     display: block;
 }
 
-/* Play Button Overlay */
+
 .play-btn-wrapper {
     position: absolute;
     top: 50%;
@@ -935,7 +935,76 @@ html, body {
     transition: transform 0.2s ease;
 }
 
-/* FIXED: Keep the translate inside the hover, and add scale */
 .play-btn:hover {
     transform: translate(-50%, -50%) scale(1.1);
+}
+
+
+.gallery-sec {
+    margin-top: 0px;
+    padding: 100px 20px;
+    background: url(images/speaker_bg.png);
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.gallery-header {
+    position: relative;
+    margin-bottom: 40px;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-header .gg-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 130px;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.04); 
+    z-index: 0;
+    pointer-events: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.gallery-header h5, 
+.gallery-header h2 {
+    position: relative;
+    z-index: 1;
+}
+
+.gallery-header h5 {
+    color: #F8669E;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.gallery-header h2 {
+    color: #2b1d42;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.gallery-header .highlight {
+    color: #F8669E;
+}
+
+
+.gallery-grid {
+    max-width: 1301px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
 }
