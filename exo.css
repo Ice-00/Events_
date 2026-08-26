@@ -596,6 +596,7 @@ html, body {
 .pricing-header {
     position: relative;
     margin-bottom: 60px;
+    text-align: center;
 }
 
 .pricing-header .bg-text {
@@ -1011,17 +1012,18 @@ html, body {
 }
 
 
-
 .test-sec {
     padding: 100px 20px;
     background-color: #f7f7f7;
     margin-bottom: 100px;
 }
 
+
 .testimonial-content {
     max-width: 1306px;
     margin: 0 auto;
 }
+
 
 /* Header style matching previous sections */
 .testimonial-header {
@@ -1033,6 +1035,7 @@ html, body {
     margin-bottom: 10px;
     margin-left: 280px;
 }
+
 
 .testimonial-header .t-text {
     position: absolute;
@@ -1049,11 +1052,13 @@ html, body {
     white-space: nowrap;
 }
 
+
 .testimonial-header h5,
 .testimonial-header h2 {
     position: relative;
     z-index: 1;
 }
+
 
 .testimonial-header h5 {
     color: #F8669E;
@@ -1272,7 +1277,6 @@ html, body {
     color: #F8669E; /* Pink star color */
     font-size: 16px;
 }
-
 
 
 
@@ -1639,9 +1643,11 @@ html, body {
     transition: opacity 0.3s ease;
 }
 
+
 .footer-socials a:hover {
     opacity: 0.85;
 }
+
 
 /* Quick Links Column */
 .f-links ul {
@@ -1733,7 +1739,7 @@ html, body {
     transition: opacity 0.3s ease;
 }
 
-.f-newsletter button:hover {
+.f-newsletter button:hover{
     opacity: 0.9;
 }
 
