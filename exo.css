@@ -439,7 +439,7 @@ html, body {
 }
 
 .event-details h3 {
-    color: #22125d;
+    color: #333369;
     font-size: 1.2rem;
     margin-bottom: 10px;
 }
@@ -799,13 +799,13 @@ html, body {
 
 .expo-header h5 {
     color: #F8669E;
-    font-size: 1rem; /* Fixed the missing '1' or value here */
+    font-size:21px; /* Fixed the missing '1' or value here */
     margin-bottom: 10px;
 }
 
 
 .expo-header h2 {
-    font-size: 2.5rem;
+    font-size: 56px;
     font-weight: 700;
     line-height: 1.2;
 }
@@ -986,7 +986,7 @@ html, body {
 }
 
 .gallery-header h2 {
-    color: #2b1d42;
+    color: #333369;
     font-size: 2.5rem;
     font-weight: 700;
 }
@@ -1030,14 +1030,14 @@ html, body {
     flex-direction: column;
     justify-content: flex-start;
     margin-top: 50px;
-    margin-bottom: 70px;
-    margin-left: 300px;
+    margin-bottom: 10px;
+    margin-left: 280px;
 }
 
 .testimonial-header .t-text {
     position: absolute;
     top: 40%;
-    left: 20%;
+    left: 23%;
     transform: translate(-50%, -50%);
     font-size: 130px;
     font-weight: 800;
@@ -1057,14 +1057,19 @@ html, body {
 
 .testimonial-header h5 {
     color: #F8669E;
-    font-size: 1rem;
+    font-size: 21px;
+    top: 20px;
+    padding-bottom:0px;
     margin-bottom: 10px;
 }
 
 .testimonial-header h2 {
-    color: #2b1d42;
-    font-size: 2.5rem;
+    color: #333369;
+    bottom: 10px;
+    font-size: 56px;
     font-weight: 700;
+    padding-top: 0px;
+    margin-bottom: 0px;
 }
 
 .testimonial-header .highlight {
@@ -1082,12 +1087,12 @@ html, body {
 
 /* Testimonial Quote Card */
 .testimonial-card {
-    flex: 1;
-    min-width: 320px;
+    max-width: 720px;
+    max-height:311px ;
     background: #ffffff;
+    margin-top: 20px;
+    margin-left: 280px;
     padding: 40px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
-    border-radius: 8px;
     position: relative;
 }
 
@@ -1135,8 +1140,7 @@ html, body {
     flex: 1;
     min-width: 320px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-left: 80px;
 }
 
 .circles-bg {
