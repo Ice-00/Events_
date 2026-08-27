@@ -6,9 +6,23 @@ html, body {
     overflow-x: hidden;
 }
 
+@font-face {
+    font-family: "Inter";
+    src: url("fonts/Inter_24pt-Regular.ttf") format("truetype"); /* Or format("truetype") if it's a .ttf file */
+    font-weight: 300; /* Adjust weight if needed */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url("fonts/Poppins-Bold.ttf") format("truetype"); /* Or format("truetype") if it's a .ttf file */
+    font-weight: 400; /* Adjust weight if needed */
+    font-style: normal;
+}
+
 .home-sec{
-    background: linear-gradient(135deg, rgba(38, 15, 124, 0.85) 10%, rgba(229, 36, 155, 0.9) 60%), url('images/pexels-wendy-wei-1190297.jpg');
-    height:735px;
+    background: linear-gradient(135deg, rgba(38, 15, 124, 0.85) 2%, rgba(177, 6, 111, 0.8) 63%), url('images/pexels-wendy-wei-1190297.jpg');
+    height:727px;
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -20,26 +34,39 @@ html, body {
 .home-container {
     display: flex;
     justify-content: space-between;
+    gap: 100px;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
+.logo{
+    left:-60px;
+}
+
+
+
 .nav-bar{
     position: sticky;
+    
 }
 .nav-bar ul {
     display: flex;
+    font-family: "Poppins-Bold";
     list-style: none;
+    flex-wrap: nowrap;
     font-size: 16px;
-    gap: 30px;
+    gap: 20px;
 }
 
 .nav-bar a {
     text-decoration: none;
     color: #ffffff;
     font-weight: 600;
+}
+.search-icon{
+    margin-left: -90px;
 }
 
 .Buy-ticketbtn{
@@ -49,6 +76,7 @@ html, body {
     gap: 12px;
     background-color: #F8669E;
     height: 53px;
+    margin-left: 80px;
     width:142px;
     padding: 11px 20px;
     color:#ffffff;
@@ -71,90 +99,94 @@ html, body {
 }
 
 
-/* Container for the text content inside the hero section */
-.home-content {
-    max-width: 2000px;
-    margin: 148px 400px; /* Pushes the text down below your header */
+/* Hero Wrapper Layout */
+.hero-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1300px;
+    margin: 30px auto 0 auto;
     padding: 0 20px;
 }
 
-/* Small subtitle above the main headline */
+/* Home Content Text Area */
+.home-content {
+    max-width: 800px; 
+    margin-top:-60px;
+    padding: 0;
+}
+
 .home-content .sub-title {
-    color: #e1306c; /* Matches your theme pink */
-    font-size: 1.1rem;
-    font-weight: 700;
+    color: #F8669E;
+    font-size: 21px;
+    font-family: "Inter";
     text-transform: uppercase;
     letter-spacing: 1.5px;
     display: block;
     margin-bottom: 15px;
 }
 
-/* Massive main headline */
+/* Fixes the awkward word breaking */
 .home-content h1 {
-  font-size: 3.8rem; /* Scaled down slightly from 3.5rem so it fits better */
-    font-weight: 800;
+    font-size: 70px; /* Scaled down slightly so "CONFERENCE" fits nicely on one line */
+    font-family: "Inter";
     line-height: 1.15;
     color: #ffffff;
-    margin: 0 20px 20px 0;
-    text-transform: uppercase;
-    max-width: 2000px; /* Forces words to wrap cleanly before hitting the image */
+    margin: 0 0 20px 0;
+    text-transform: capitalize;
+    letter-spacing: 2px;
 }
 
-/* Descriptive paragraph text */
 .home-content p {
-    font-size: 1rem;
-    color: #e0e0e0;
-    max-width: 480px; /* Limits width so it wraps nicely like the template */
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    color: #ffffff;
+    max-width: 480px;
     line-height: 1.6;
     margin: 0;
+   
 }
 
-
-.hero-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 40px auto 0 auto;
-    padding: 0 20px;
+/* Hero Image & Background Ring Alignment */
+.hero-image {
+    max-width: 500px;
+    margin-left: 0; /* Clears out that broken negative margin */
+    position: relative;
+    margin-top: 54px;
+    background: url(images/manbg.png) no-repeat center ;
+    background-size: 100px auto;
 }
 
-/* Resets home-content to fit inside the flex wrapper */
-.home-content {
-    max-width: 600px;
-    margin: 130px 10px; /* Clears out old margins */
-    padding: 0;
-}
-
-.hero-image{
-    max-width: fit-content;
-}
-/* Styles the speaker image container */
-.hero-image img     {
-    max-width: 539px; /* Adjust size to fit your template */
-    height: 60%;
+.hero-image img {
+    width: 100%;
+    height: auto;
     display: block;
     object-fit: cover;
+    margin-bottom: 0px;
 }
-
 .countdown{
     background-color: #F8669E;
     height: 162px;
     width:1144px;
-    margin-top: -50px;
+    margin-top: -50px
 }
 
 .countdown-metrics{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    gap: 10px;   
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;   
     margin-top:0px;
 }
 
 .countdown-metrics div{
     color: #fdfdff;
-    font-size: 56px;
+    font-size: 58px;
+    font-family: "Poppins",sans-serif;
+    font-weight: 400 !important;
+    margin-top: 30px;
+    margin-right: 100px;
 }
 
 .countdown-metrics p{
@@ -169,47 +201,96 @@ html, body {
     max-width: 1200px;
     margin: 200px auto;
     padding: 0 20px;
+    background: url(images/testimonial-1.png)no-repeat center center;
+    background-size: cover;
+    min-height: 400px;
 }
 
 /* 2-Column Grid: Left side for cards, Right side for text */
 .join-content {
     display: grid;
     height: 650px;
+    width:1285;
     grid-template-columns: 1.2fr 1fr;
     align-items: center;
-    gap: 60px;
+    justify-content: center;
+    gap: 100px;
 }
 
 /* Left card wrapper layout */
-.card-column {
-    position: relative;
+.cards-wrapper {
     display: flex;
     gap: 30px;
-    align-items: center;
+    align-items: flex-start;
+    margin-left: -120px;
+    background: url(images/contentbg.png) no-repeat center center;
+    background-size: 700px auto;
 }
 
-/* Left vertical stack of two cards */
-.card {
+.card-col {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
     flex: 1;
 }
 
-/* Individual Card Styling */
-.card1, .card2, .card3 {
-    background: #ffffff;
-    padding: 35px 30px;
-    border-radius: 6px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
-    border-top: 3px solid transparent;
+/* Staggers the second column down to match the template */
+.card-col.col-2 {
+    margin-top: 140px; 
+    margin-left: -10px;
 }
 
-/* Stagger the middle card (Digital Marketing) to overlap to the right */
-.card3 {
-    position: relative;
-    right: 20px;
-    z-index: 2; /* Keeps it layered cleanly on top */
+.service-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #ffffff;
+    padding:5px;
+    width: 354px;   /* Change to your desired width */
+    height: 285px;
+    border: .5px solid #F3F3F3;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+    text-align: center;
+}
+
+
+/* Proper Pink Icon Box */
+.s-icon {
+    width: 55px;
+    height: 55px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 150px;
+    margin-bottom: 20px;
+}
+
+.s-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.service-card h3 {
+    font-size: 21px;
+    font-family: "Inter", sans-serif;
+    color: #333369;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.service-card p {
+    font-size: 16px;
+    color: #707070;
+    margin-bottom: 20px;
+}
+
+.service-card a {
+    font-size: 16px;
+   font-family: "Poppins",sans-serif;
+    color: #F8669E;
+    text-decoration: none;
 }
 
 /* Right side text block styling */
@@ -218,15 +299,16 @@ html, body {
 }
 
 .join-text h2 {
-    font-size: 3rem;
-    font-weight: 800;
-    color: #22125d;
+    font-size:56px;
+    font-family: "Inter", sans-serif;
+    color: #333369;
     line-height: 1.15;
     margin-bottom: 20px;
+    text-transform: capitalize;
 }
 
 .join-text h2 span {
-    color: #e1306c;
+    color: #F8669E;
 }
 
 .join-text p {
@@ -238,16 +320,29 @@ html, body {
 
 /* Button style matching the template */
 .join-text button {
-    background-color: #e1306c;
-    color: white;
-    border: none;
-    padding: 14px 28px;
-    font-weight: 700;
-    border-radius: 4px;
-    cursor: pointer;
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    gap: 12px;
+    background-color: #F8669E;
+    height: 53px;
+    width:142px;
+    padding: 11px 20px;
+    color:#ffffff;
+    cursor: pointer;
+    font-size: 15px;
+    border: none;
+    white-space: nowrap;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3 ease-in-out;
+    background: linear-gradient(to left, #F8669E 50%, #012d7a 50%);
+    background-size: 200% 100%; 
+    background-position: right bottom; 
+    transition: background-position 0.4s ease-in-out;
+}
+
+.join-text button:hover{
+    background-position: left bottom;
 }
 
 
@@ -261,7 +356,7 @@ html, body {
 }
 
 
-#About::before {
+.ab-text::before {
     content: '';
     position: absolute;
     top: 0;
@@ -274,24 +369,46 @@ html, body {
 
 .about-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 8fr;
     align-items: center;
-    gap: 50px;
+    gap: 100px;
 }
 
 .about-text {
     padding: 60px 0; /* No background needed here anymore, the pseudo-element handles it */
+    margin-right: 10px;
+}
+
+.about-sec span{
+    margin-bottom: 0px;
+    font-family: "Inter" , sans-serif;
+}
+
+.about-sec h2{
+    margin-top:10px;
+    font-family: "Inter" , sans-serif;
+    margin-bottom: 15px;
+}
+
+.about-sec p{
+    color: #707070;
+    font-size: 16px;
+    font-family:"Poppins", sans-serif;
+    margin-top: 10px;
+    min-width:100px;
 }
 
 .image-column {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
+    grid-template-columns: 5fr 5fr;
     gap: 20px;
     align-items: center;
+    margin-left: 100px;
+    margin-top: 90px;
 
-    background-image: url('images/contentbg.png');
-    background-size: cover;
-    background-position: center;
+    background-image: url('images/contentbg.png') ;
+    background-size: 650px;
+    background-position: center 10px;
     background-repeat: no-repeat;
 }
 
@@ -300,6 +417,7 @@ html, body {
     height: auto;
     display: block;
     border-radius: 4px;
+  
 }
 
 .image-column > div:nth-child(2) {
@@ -337,6 +455,9 @@ html, body {
     background-position: left bottom;
 }
 
+
+
+
 .metric{
     height: 252px;
 }
@@ -352,6 +473,8 @@ html, body {
 .metrics div{
     color: #333369;
     font-size: 56px;
+    font-family: "Inter", sans-serif;
+    font-weight: bold!important;
 }
 
 .metrics p{
@@ -359,8 +482,10 @@ html, body {
     font-size: 16px;
 }
 
+
 #schedule{
     height: 1300px;
+    background:linear-gradient(to left, #F7F7F7 50% , transparent 50%);
 }
 
 .schedule-content{
@@ -371,21 +496,35 @@ html, body {
 
 .schedule-header {
     position: relative; 
-    margin-bottom: 10px;
-    margin-left: 400px;
+    margin-bottom: -2px;
+    margin-top: -10px;
+    margin-left: 270px;
 }
 
+.schedule-header h5{
+    color: #F8669E;
+    bottom: -30px;
+    font-family: "Inter" , sans-serif;
+}
+
+.schedule-header h2{
+    color: #333369;
+    font-family: "Inter" , sans-serif;
+    letter-spacing: .5px;
+}
 
 .schedule-header .bg-text {
     position: absolute;
-    top: -30px; 
+    top: -2px; 
     left: 0;
-    font-size: 7rem; 
     font-weight: 800;
-    color: rgba(0, 0, 0, 0.03); 
+    font-family: "Inter" , sans-serif;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(5, 113, 245, 0.06);
+    color: rgba(253, 253, 253, 0.03); 
     z-index: 0;
     pointer-events: none; 
-    text-transform: uppercase;
+    text-transform: capitalize;
     letter-spacing: 2px;
 }
 
@@ -396,13 +535,16 @@ html, body {
     z-index: 1;
 }
 
+
+
 .schedule-items {
     display: flex;
     align-items: center;
     background: #ffffff;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     margin-bottom: 25px;
-    margin-left: 400px;
+    margin-left: 270px;
+    margin-top: -1px;
     border-radius: 0px;
     overflow: hidden;
     max-width: 1200px;
@@ -411,7 +553,7 @@ html, body {
 
 /* Left Pink Time Block */
 .event-item {
-    background-color: #e1306c;
+    background-color: #F8669E;
     color: white;
     padding: 40px 30px;
     width: 250px;
@@ -495,10 +637,43 @@ html, body {
 
 
 #speakers{
+    position: relative;
     max-height: 1394px;
     width: 100%;
-    margin-bottom: 100px;
+    margin-top: 100px;
+    overflow: hidden;
+   
 }
+
+
+.speaker-sec::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Put your background image properties here instead */
+    background: url(images/manbg.png) no-repeat left;
+    background-size: contain;
+    background-attachment: local;
+    /* Control your opacity here (e.g., 0.3 for 30% visibility, 0.5 for 50%) */
+    opacity: 0.3; 
+    
+    z-index: 0; /* Keeps it sitting behind your actual content */
+    pointer-events: none; /* Ensures clicks pass right through it */
+}
+
+.speaker-sec > * {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
+
 
 .speaker-header{
     position: relative;
@@ -506,12 +681,13 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: "Inter",sans-serif;
 }
 
 
 .speaker-header .sp-text {
    position: absolute;
-    top: 40%; /* Moves it vertically to the middle */
+    top: 24%; /* Moves it vertically to the middle */
     left: 50%; /* Moves it horizontally to the center of the container */
     transform: translate(-50%, -50%); /* Shifts it back so its exact center aligns with the middle */
     font-size: 130px; /* Adjust size if it's too big for the container */
@@ -521,6 +697,9 @@ html, body {
     text-transform: capitalize;
     letter-spacing: 2px;
     white-space: nowrap; /* Keeps the word on a single line */
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(5, 113, 245, 0.06);
+    color: rgba(253, 253, 253, 0.03); 
 }
 
 .image-grid {
@@ -571,7 +750,7 @@ html, body {
     white-space: nowrap;
     box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
     margin-left: 850px;
-    margin-bottom: 20px;
+    margin-bottom: 100px;
 
     background: linear-gradient(to left, #F8669E 50%, #012d7a 50%);
     background-size: 200% 100%;
@@ -1580,7 +1759,7 @@ html, body {
 
 /* Main Footer Section */
 .footer-main-sec {
-    background: linear-gradient(rgba(31, 23, 61, 0.9), rgba(31, 23, 61, 0.95)), url('images/pexels-sascha.jpg') no-repeat center center;
+    background: linear-gradient(rgba(31, 23, 61, 0.9), rgba(49, 48, 98, 0.95)), url('images/pexels-sascha.jpg') no-repeat center center;
     background-size: cover;
     color: #ffffff;
     padding: 90px 20px 70px 20px;
@@ -1745,9 +1924,10 @@ html, body {
 
 /* Actual Footer Bottom Bar */
 .footer-bottom-sec {
-    background-color: #160f2b; /* Slightly darker solid shade for the true footer bar */
+    background-color: #333369; /* Slightly darker solid shade for the true footer bar */
     text-align: center;
     padding: 25px 20px;
-    font-size: 0.85rem;
-    color: #9c98af;
+    font-family: "Poppins" ,sans-serif;
+    font-size:16px;
+    color: #ffffff;
 }
