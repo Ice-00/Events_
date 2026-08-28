@@ -112,7 +112,8 @@ html, body {
 /* Home Content Text Area */
 .home-content {
     max-width: 800px; 
-    margin-top:-60px;
+    margin-top:-100px;
+    margin-left: 40px;
     padding: 0;
 }
 
@@ -126,9 +127,9 @@ html, body {
     margin-bottom: 15px;
 }
 
-/* Fixes the awkward word breaking */
+
 .home-content h1 {
-    font-size: 70px; /* Scaled down slightly so "CONFERENCE" fits nicely on one line */
+    font-size: 70px; 
     font-family: "Inter";
     line-height: 1.15;
     color: #ffffff;
@@ -141,7 +142,7 @@ html, body {
     font-size: 16px;
     font-family: "Inter", sans-serif;
     color: #ffffff;
-    max-width: 480px;
+    max-width: 620px;
     line-height: 1.6;
     margin: 0;
    
@@ -150,20 +151,29 @@ html, body {
 /* Hero Image & Background Ring Alignment */
 .hero-image {
     max-width: 500px;
-    margin-left: 0; /* Clears out that broken negative margin */
+    margin-left: 0; 
     position: relative;
     margin-top: 54px;
-    background: url(images/manbg.png) no-repeat center ;
-    background-size: 100px auto;
+    
+   
+    background: url(images/manbg.png) no-repeat center;
+    background-size: contain; 
+    
+    min-height: 400px; 
 }
-
 .hero-image img {
     width: 100%;
     height: auto;
     display: block;
     object-fit: cover;
     margin-bottom: 0px;
+    
+    
+    position: relative;
+    z-index: 1; 
 }
+
+
 .countdown{
     background-color: #F8669E;
     height: 162px;
@@ -203,7 +213,7 @@ html, body {
     padding: 0 20px;
     background: url(images/testimonial-1.png)no-repeat center center;
     background-size: cover;
-    min-height: 400px;
+    min-height: 500px;
 }
 
 /* 2-Column Grid: Left side for cards, Right side for text */
@@ -312,8 +322,8 @@ html, body {
 }
 
 .join-text p {
-    color: #666;
-    font-size: 1rem;
+    color: #707070;
+    font-size: 16px;
     line-height: 1.6;
     margin-bottom: 30px;
 }
@@ -517,15 +527,16 @@ html, body {
     position: absolute;
     top: -2px; 
     left: 0;
-    font-weight: 800;
+    font-weight: 300!important;
     font-family: "Inter" , sans-serif;
     color: transparent;
-    -webkit-text-stroke: 1px rgba(5, 113, 245, 0.06);
-    color: rgba(253, 253, 253, 0.03); 
+    -webkit-text-stroke: 1px #33336933;
     z-index: 0;
     pointer-events: none; 
     text-transform: capitalize;
     letter-spacing: 2px;
+
+
 }
 
 
@@ -561,6 +572,12 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-self: stretch; /* Makes it match the card's height */
+    font-family: "Inter",sans-serif;
+}
+
+i {
+    font-size: 12px;
+    color: #F8669E;
 }
 
 .event-item span {
@@ -584,6 +601,7 @@ html, body {
     color: #333369;
     font-size: 1.2rem;
     margin-bottom: 10px;
+    font-family: "Inter";
 }
 
 .event-details p {
@@ -687,19 +705,19 @@ html, body {
 
 .speaker-header .sp-text {
    position: absolute;
-    top: 24%; /* Moves it vertically to the middle */
-    left: 50%; /* Moves it horizontally to the center of the container */
-    transform: translate(-50%, -50%); /* Shifts it back so its exact center aligns with the middle */
-    font-size: 130px; /* Adjust size if it's too big for the container */
-    font-weight: 800;
-    color: rgba(0, 0, 0, 0.03); /* Faint watermark effect */
+    top: 24%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    font-size: 130px; 
+    font-weight: 300!important;
+    color: rgba(0, 0, 0, 0.03); 
     z-index: 0; 
     text-transform: capitalize;
     letter-spacing: 2px;
-    white-space: nowrap; /* Keeps the word on a single line */
+    white-space: nowrap;
+
     color: transparent;
-    -webkit-text-stroke: 1px rgba(5, 113, 245, 0.06);
-    color: rgba(253, 253, 253, 0.03); 
+    -webkit-text-stroke: 1px #33336966
 }
 
 .image-grid {
@@ -740,7 +758,7 @@ html, body {
     align-items: center;
     justify-content: center;
     gap: 12px;
-    height: 40px;
+    height: 50px;
     width: 200px;
     padding-bottom: 0px;
     color: #ffffff;
@@ -764,39 +782,77 @@ html, body {
 
 
 
-.pricing-sec {
+.pricing-sec{
     margin-top: 100px;
     padding: 100px 20px;
-    background-color:#120000;
-    text-align: center;
+    background-color:#F7F7F7;
     margin-bottom:100px;
 }
 
 .pricing-header {
     position: relative;
     margin-bottom: 60px;
-    text-align: center;
+    margin-left: 280px;
 }
 
 .pricing-header .bg-text {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 20%;
+    left: 12.5%;
     transform: translate(-50%, -50%);
     font-size: 7rem;
-    font-weight: 800;
+    font-family: "Inter",sans-serif;
+    font-weight: 400!important;
     color: rgba(0, 0, 0, 0.03);
     z-index: 0;
     pointer-events: none;
-    text-transform: uppercase;
+    text-transform: capitalize;
     white-space: nowrap;
+
+   color: transparent;
+    -webkit-text-stroke: 1px #43434366
 }
 
 .pricing-header h5, 
 .pricing-header h2 {
     position: relative;
     z-index: 1;
+    font-family: "Inter",sans-serif;
 }
+.pricing-header h5{
+    margin-bottom: 20px;
+    bottom: -20px;
+    color: #F8669E;
+}
+
+.pricing-header h2{
+    margin-top: 0px;
+    top: 10px;
+    color: #333369;
+    
+}
+
+.pricing-header span{
+    color: #F8669E;
+}
+
+.price-card .wave {
+    position: absolute;
+    top:-15px;
+    left: 0;
+    width: 100% !important; /* Forces it to span the full width of the card */
+    height: auto !important;
+    line-height: 0;        /* Removes extra spacing under the image */
+}
+
+.price-card .wave img {
+    width: 100%;
+    height: 15px;           /* Controls how tall the wave bumps look */
+    object-fit: cover;      /* Stretches it cleanly across the top */
+    display: block;
+}
+
+
 
 /* Pricing Grid Layout */
 .pricing-container {
@@ -823,6 +879,7 @@ html, body {
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+    overflow: hidden;
 
     
 }
@@ -832,7 +889,7 @@ html, body {
     background-color: #333369; /* Dark Navy/Purple */
     color: #ffffff;
     border: none;
-    transform: scale(1.03); /* Slightly taller/larger than the others */
+    height: 750px !important;
     z-index: 2;
 }
 
@@ -959,16 +1016,20 @@ html, body {
 
 .expo-header .exp-text {
     position: absolute;
-    top: 50%;
+    top: 22%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 200px;
-    font-weight: 800;
+    font-size: 130px;
+    font-weight: 400!important;
     color: rgba(255, 255, 255, 0.03); 
     z-index: 2; /* Keep it at the very bottom layer */
     pointer-events: none;
     text-transform: uppercase;
     white-space: nowrap;
+    font-family:"Inter" , sans-serif;
+
+   color: transparent;
+    -webkit-text-stroke: 1px #F8669E33
 }
 
 .expo-header h5,
@@ -980,7 +1041,7 @@ html, body {
 .expo-header h5 {
     color: #F8669E;
     font-size:21px; /* Fixed the missing '1' or value here */
-    margin-bottom: 10px;
+    bottom: -20px;
 }
 
 
@@ -988,6 +1049,7 @@ html, body {
     font-size: 56px;
     font-weight: 700;
     line-height: 1.2;
+    margin-top: 10px;
 }
 
 .expo-header .highlight {
@@ -1131,8 +1193,8 @@ html, body {
 
 .gallery-header {
     position: relative;
-    margin-bottom: 40px;
-    margin-top: 150px;
+    margin-bottom: 20px;
+    margin-top: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1145,12 +1207,17 @@ html, body {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 130px;
-    font-weight: 800;
+    font-weight: 300!important;
     color: rgba(0, 0, 0, 0.04); 
     z-index: 0;
+    font-family:"Inter" , sans-serif;
     pointer-events: none;
-    text-transform: uppercase;
+    text-transform: capitalize;
     white-space: nowrap;
+
+    color: transparent;
+    -webkit-text-stroke: 1px #CFCFDC55
+
 }
 
 .gallery-header h5, 
@@ -1162,13 +1229,16 @@ html, body {
 .gallery-header h5 {
     color: #F8669E;
     font-size: 1rem;
-    margin-bottom: 5px;
+    bottom: -17px;
+    font-family:"Inter" , sans-serif;
 }
 
 .gallery-header h2 {
     color: #333369;
     font-size: 2.5rem;
-    font-weight: 700;
+    font-weight: 700!important;
+    font-family:"Inter" , sans-serif;
+    margin-top: 0px;
 }
 
 .gallery-header .highlight {
@@ -1210,25 +1280,29 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-top: 50px;
-    margin-bottom: 10px;
+    margin-top: 70px;
+    margin-bottom: -60px;
     margin-left: 280px;
+    font-family: "Inter",sans-serif;
 }
 
 
 .testimonial-header .t-text {
     position: absolute;
-    top: 40%;
+    top: 36%;
     left: 23%;
     transform: translate(-50%, -50%);
     font-size: 130px;
-    font-weight: 800;
-    color: rgba(0, 0, 0, 0.03);
+    font-weight: 500!important;
     z-index: 0;
     pointer-events: none;
     text-transform: capitalize;
     letter-spacing: 2px;
     white-space: nowrap;
+
+    
+    color: transparent;
+    -webkit-text-stroke: 1px #CFCFDC66
 }
 
 
@@ -1242,9 +1316,9 @@ html, body {
 .testimonial-header h5 {
     color: #F8669E;
     font-size: 21px;
-    top: 20px;
+    top: 40px;
     padding-bottom:0px;
-    margin-bottom: 10px;
+    bottom: 30px;
 }
 
 .testimonial-header h2 {
@@ -1254,6 +1328,7 @@ html, body {
     font-weight: 700;
     padding-top: 0px;
     margin-bottom: 0px;
+    margin-top: 25px;
 }
 
 .testimonial-header .highlight {
@@ -1267,6 +1342,7 @@ html, body {
     justify-content: space-between;
     gap: 40px;
     flex-wrap: wrap;
+    margin-top: 10px;
 }
 
 /* Testimonial Quote Card */
@@ -1289,9 +1365,10 @@ html, body {
 }
 
 .quote-text {
-    color: #666;
-    font-size: 0.95rem;
+    color: #707070;
+    font-size: 16px;
     line-height: 1.6;
+    font-family:"Poppins",sans-serif ;
     margin-bottom: 30px;
 }
 
@@ -1310,7 +1387,7 @@ html, body {
 
 .author-info h4 {
     font-size: 1.1rem;
-    color: #2b1d42;
+    color: #333369;
     margin: 0;
 }
 
@@ -1325,6 +1402,7 @@ html, body {
     min-width: 320px;
     display: flex;
     margin-left: 80px;
+    opacity: 0.8;
 }
 
 .circles-bg {
@@ -1339,7 +1417,7 @@ html, body {
 
 .partners-sec {
     position: relative;
-    height: 664px;
+    height: 572px;
     padding: 0px 20px;
     background: url('images/contentbg.png') no-repeat center -300px;
     background-size:930px; /* Stretches the frame nicely to fit the section */
@@ -1360,6 +1438,7 @@ html, body {
     justify-content: center;
     margin-bottom: 10px;
     text-align: center;
+    font-family: "Inter",sans-serif;
 }
 
 .partners-header .p-text {
@@ -1368,14 +1447,17 @@ html, body {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 130px;
-    font-weight: 800;
+    font-weight: 300!important;
     margin-bottom: 10px;
-    color: rgba(0, 0, 0, 0.03);
     z-index: 0;
     pointer-events: none;
     text-transform: capitalize;
     letter-spacing: 2px;
     white-space: nowrap;
+
+    
+    color: transparent;
+    -webkit-text-stroke: 1px #CFCFDC55
 }
 
 .partners-header h5,
@@ -1387,14 +1469,14 @@ html, body {
 .partners-header h5 {
     color: #F8669E;
     font-size: 1rem;
-    margin-bottom: 10px;
+    bottom: -55px;
 }
 
 .partners-header h2 {
-    color: #2b1d42;
+    color: #333369;
     font-size: 2.5rem;
     font-weight: 700;
-    margin-top:70px;
+    margin-top:30px;
 }
 
 .partners-header .highlight {
@@ -1404,7 +1486,7 @@ html, body {
 /* Partners Logo Grid (4 columns, 2 rows) */
 .partners-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 3fr);
     gap: 30px;
 }
 
@@ -1412,7 +1494,7 @@ html, body {
     background: #ffffff;
     border: 1px solid #eaeaea;
     border-radius: 6px;
-    height: 110px;
+    height: 115px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1421,10 +1503,6 @@ html, body {
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.02);
 }
 
-.partner-card:hover {
-    box-shadow: 0px 10px 25px rgba(248, 102, 158, 0.1);
-    border-color: rgba(248, 102, 158, 0.3);
-}
 
 .partner-card img {
     max-width: 100%;
@@ -1437,6 +1515,8 @@ html, body {
 .partner-card:hover img {
     opacity: 1;
 }
+
+
 
 .section-divider {
     position: relative;
@@ -1499,6 +1579,7 @@ html, body {
     justify-content: center;
     margin-bottom: 30px;
     text-align: center;
+    font-family: "Inter",sans-serif;
 }
 
 .news-header .n-text {
@@ -1507,13 +1588,16 @@ html, body {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 130px;
-    font-weight: 800;
-    color: rgba(0, 0, 0, 0.03);
+    font-weight: 300!important;
+    font-family: "Inter",sans-serif;
     z-index: 0;
     pointer-events: none;
     text-transform: capitalize;
     letter-spacing: 2px;
     white-space: nowrap;
+
+    color: transparent;
+    -webkit-text-stroke: 1px #43434333
 }
 
 .news-header h5,
@@ -1529,7 +1613,7 @@ html, body {
 }
 
 .news-header h2 {
-    color: #2b1d42;
+    color: #333369;
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 10px;
@@ -1560,7 +1644,7 @@ html, body {
 
 .news-img-box {
     position: relative;
-    height: 220px;
+    height: 260px;
     overflow: hidden;
 }
 
@@ -1584,25 +1668,28 @@ html, body {
 }
 
 .news-body {
-    padding: 25px;
+    padding: 10px;
 }
 
 .news-body h3 {
-    color: #2b1d42;
-    font-size: 1.15rem;
+    color: #333369;
+    font-size:21px;
     font-weight: 700;
     line-height: 1.4;
-    margin-bottom: 20px;
+    font-family: "Inter",sans-serif;
+    margin-bottom: 15px;
+    
 }
 
 .read-more {
     display: inline-block;
     color: #F8669E;
-    font-size: 0.75rem;
-    font-weight: 700;
+    font-size: 13.6px;
+    font-weight: 400!important;
+    font-family:"Poppins",sans-serif;
     text-decoration: none;
     letter-spacing: 1px;
-    margin-bottom: 20px;
+    margin-bottom: -10px;
 }
 
 .read-more:hover {
@@ -1611,9 +1698,11 @@ html, body {
 
 .news-meta {
     border-top: 1px solid #f0f0f0;
-    padding-top: 15px;
-    font-size: 0.85rem;
-    color: #888888;
+    margin-top: 25px;
+    padding-top: 16px;
+    font-size: 16px;
+    font-family: "Poppins",sans-serif;
+    color: #707070;
 }
 
 
@@ -1647,6 +1736,7 @@ html, body {
     justify-content: center;
     margin-bottom: 30px;
     text-align: left;
+    font-family: "inter",sans-serif;
 }
 
 .venue-header .v-text {
@@ -1654,13 +1744,17 @@ html, body {
     top: -35px;
     left: 0;
     font-size: 110px;
-    font-weight: 800;
-    color: rgba(0, 0, 0, 0.03);
+    font-weight: 200!important;
+    font-family: "Inter", sans-serif;
     z-index: 0;
     pointer-events: none;
     text-transform: capitalize;
     letter-spacing: 2px;
     white-space: nowrap;
+
+
+    color: transparent;
+    -webkit-text-stroke: 1px #43434333
 }
 
 .venue-header h5,
@@ -1759,22 +1853,24 @@ html, body {
 
 /* Main Footer Section */
 .footer-main-sec {
-    background: linear-gradient(rgba(31, 23, 61, 0.9), rgba(49, 48, 98, 0.95)), url('images/pexels-sascha.jpg') no-repeat center center;
+    background: linear-gradient(rgba(49, 48, 98, 0.9), rgba(49, 48, 98, 0.95)), url('images/pexels-sascha.jpg') no-repeat center center;
     background-size: cover;
     color: #ffffff;
+    font-family: "Poppins",sans-serif;
+    font-weight: bold;
     padding: 90px 20px 70px 20px;
 }
 
 .footer-content {
-    max-width: 1140px;
+    max-width: 1340px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1.2fr 1.5fr;
-    gap: 30px;
+    grid-template-columns: 2.5fr 1.5fr 1.5fr 1.5fr;
+    gap: 10px;
 }
 
 .footer-col h3 {
-    font-size: 1.15rem;
+    font-size:21px;
     font-weight: 700;
     margin-bottom: 25px;
     color: #ffffff;
@@ -1784,7 +1880,7 @@ html, body {
 .footer-logo {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #ffffff;
+    color: #f7f7f7;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
@@ -1796,8 +1892,8 @@ html, body {
 }
 
 .f-about p {
-    font-size: 0.85rem;
-    color: #b3b0c2;
+    font-size:16px;
+    color: #ffffff;
     line-height: 1.6;
     margin-bottom: 25px;
 }
@@ -1811,52 +1907,73 @@ html, body {
 .footer-socials a {
     width: 38px;
     height: 38px;
-    background-color: #F8669E;
-    color: #ffffff;
+    background-color: #ffffff;
+    color:#353569;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 6px;
     text-decoration: none;
     font-size: 0.95rem;
-    transition: opacity 0.3s ease;
+    transition: background-color 1s ease ;
+}
+.footer-socials a i {
+    color: inherit; 
 }
 
-
 .footer-socials a:hover {
-    opacity: 0.85;
+    background-color: #F8669E;
+    color: #ffffff;
 }
 
 
 /* Quick Links Column */
+.f-link h3{
+font-size: 21px;
+}
+
+
 .f-links ul {
     list-style: none;
     padding: 0;
     margin: 0;
+   
 }
 
 .f-links li {
-    margin-bottom: 12px;
+    margin-bottom: 16px;
 }
 
 .f-links a {
-    color: #b3b0c2;
+    color: #ffffff;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 18px;
+    font-weight: 200!important;
     transition: color 0.3s ease;
+}
+
+i.icon-arrow-right {
+    color: #ffffff !important;            
+    font-size: 10px;                      
+    font-weight: 400;                     
+    -webkit-text-stroke: 1.5px #ffffff;   
+    margin-right: 8px;                   
 }
 
 .f-links a:hover {
     color: #F8669E;
-    padding-left: 5px;
 }
 
 /* Get In Touch Column */
 .f-contact .address {
-    font-size: 0.85rem;
-    color: #b3b0c2;
+    font-size:16px;
+    color: #ffffff;
     line-height: 1.6;
     margin-bottom: 20px;
+    margin-left:-35px;
+}
+.f-contact h3{
+     margin-left:-35px;
+     font-size: 21px;
 }
 
 .contact-item {
@@ -1864,37 +1981,37 @@ html, body {
     align-items: center;
     gap: 15px;
     margin-bottom: 15px;
+     margin-left:-35px;
 }
 
 .contact-item .f-icon {
-    font-size: 1.1rem;
-    color: #F8669E;
+    font-size: 21px;
 }
+
 
 .contact-item strong {
     display: block;
-    font-size: 0.95rem;
+    font-size: 18px;
     color: #ffffff;
 }
 
 .contact-item span {
-    font-size: 0.8rem;
-    color: #b3b0c2;
+    font-size: 18px;
+    color: #ffffff;
 }
 
 /* Newsletter Column */
 .f-newsletter p {
-    font-size: 0.85rem;
-    color: #b3b0c2;
+    font-size: 18px;
+    color: #ffffff;
     margin-bottom: 20px;
 }
 
 .f-newsletter input {
-    width: 100%;
-    padding: 14px 15px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 4px;
+    width: 308px;
+    padding: 14px 8px;
+    background-color: rgba(255, 254, 254, 0.05);
+    border: 1px solid ;
     color: #ffffff;
     font-size: 0.9rem;
     margin-bottom: 15px;
@@ -1902,16 +2019,15 @@ html, body {
 }
 
 .f-newsletter input::placeholder {
-    color: #8c889e;
+    color: #ffffff;
 }
 
 .f-newsletter button {
-    width: 100%;
     padding: 14px;
+    width: 308px;
     background-color: #F8669E;
     color: #ffffff;
     border: none;
-    border-radius: 4px;
     font-weight: 700;
     font-size: 0.9rem;
     cursor: pointer;
@@ -1929,5 +2045,6 @@ html, body {
     padding: 25px 20px;
     font-family: "Poppins" ,sans-serif;
     font-size:16px;
+    font-weight: 600;
     color: #ffffff;
 }
