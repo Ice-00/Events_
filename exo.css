@@ -14,8 +14,8 @@ html, body {
 }
 
 @font-face {
-    font-family: "Poppins-Bold";
-    src: url("fonts/Poppins-Bold.ttf") format("truetype"); /* Or format("truetype") if it's a .ttf file */
+    font-family: "Poppins";
+    src: url("fonts/Poppins-Regular.ttf") format("truetype"); /* Or format("truetype") if it's a .ttf file */
     font-weight: 400; /* Adjust weight if needed */
     font-style: normal;
 }
@@ -194,7 +194,7 @@ html, body {
     color: #fdfdff;
     font-size: 58px;
     font-family: "Poppins",sans-serif;
-    font-weight: 400 !important;
+    font-weight: 300 !important;
     margin-top: 30px;
     margin-right: 100px;
 }
@@ -220,7 +220,7 @@ html, body {
 .join-content {
     display: grid;
     height: 650px;
-    width:1285;
+    width: 1302px;
     grid-template-columns: 1.2fr 1fr;
     align-items: center;
     justify-content: center;
@@ -234,7 +234,7 @@ html, body {
     align-items: flex-start;
     margin-left: -120px;
     background: url(images/contentbg.png) no-repeat center center;
-    background-size: 700px auto;
+    background-size: 650px auto;
 }
 
 .card-col {
@@ -358,28 +358,45 @@ html, body {
 
 #About {
     position: relative; /* Needed so the background box can lock to it */
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 100px auto;
     height: 928px;
     padding: 0 20px;
     background-color: transparent;
 }
 
-
-.ab-text::before {
-    content: '';
+#About::before {
+    content: "";
     position: absolute;
     top: 0;
-    left: calc((100vw - 100%) / -2); /* Pulls the background all the way to the left browser edge */
-    width: 50vw; /* Covers exactly half of the screen width */
-    height: 100%;
-    background-color: #F7F7F7;
-    z-index: -1; /* Puts the background safely behind your text */
+    bottom: 0;
+    left: calc(-50vw + 50%);
+    width: 50vw;             
+    background-color: #F7F7F7; 
+    z-index: -1; 
+}
+
+
+.about-sec .ab-text{
+    position: absolute;
+    top: 135px; 
+    left: -72;
+    font-weight: 400!important;
+    font-family: "Inter" , sans-serif;
+    color: transparent;
+    -webkit-text-stroke: 1px #33336933;
+    z-index: 0;
+    pointer-events: none; 
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    font-family: "Inter" , sans-serif;
 }
 
 .about-container {
+    margin-left: 50px;
+    width: 1302px;
     display: grid;
-    grid-template-columns: 2fr 8fr;
+    grid-template-columns: 1.5fr 1.9fr;
     align-items: center;
     gap: 100px;
 }
@@ -389,13 +406,12 @@ html, body {
     margin-right: 10px;
 }
 
-.about-sec span{
-    margin-bottom: 0px;
-    font-family: "Inter" , sans-serif;
+.about-text h4{
+    margin-bottom: 3px;
 }
 
 .about-sec h2{
-    margin-top:10px;
+    margin-top:0px;
     font-family: "Inter" , sans-serif;
     margin-bottom: 15px;
 }
@@ -405,15 +421,18 @@ html, body {
     font-size: 16px;
     font-family:"Poppins", sans-serif;
     margin-top: 10px;
-    min-width:100px;
+    width: 100%;
+    min-width:450px;
+
+
 }
 
 .image-column {
     display: grid;
-    grid-template-columns: 5fr 5fr;
+    grid-template-columns: 1.7fr 1.67fr;
     gap: 20px;
     align-items: center;
-    margin-left: 100px;
+    margin-left: -30px;
     margin-top: 90px;
 
     background-image: url('images/contentbg.png') ;
@@ -594,7 +613,7 @@ i {
 /* Middle Details */
 .event-details {
     padding: 30px;
-    flex-grow: 4; /* Takes up all the middle space */
+    flex-grow: 4; 
 }
 
 .event-details h3 {
@@ -608,6 +627,7 @@ i {
     color: #666;
     font-size: 0.9rem;
     line-height: 1.5;
+    font-family: "Poppins" , sans-serif;
     margin-bottom: 15px;
 }
 
@@ -642,6 +662,7 @@ i {
     color: #e1306c;
     font-size: 0.95rem;
     font-weight: 700;
+    font-family: "Inter" , sans-serif;
     margin-bottom: 4px;
 }
 
@@ -649,6 +670,7 @@ i {
     color: #888;
     font-size: 0.8rem;
     margin-top: 0px;
+    font-family: "Poppins",sans-serif;
 }
 
 
@@ -837,18 +859,17 @@ i {
 }
 
 .price-card .wave {
-    position: absolute;
-    top:-15px;
+  position: absolute;
+    top: 0;
     left: 0;
-    width: 100% !important; /* Forces it to span the full width of the card */
-    height: auto !important;
-    line-height: 0;        /* Removes extra spacing under the image */
+    width: 100%;        /* Span the full width of the card */
+    line-height: 0;   /* Removes extra spacing under the image */
 }
 
 .price-card .wave img {
-    width: 100%;
-    height: 15px;           /* Controls how tall the wave bumps look */
-    object-fit: cover;      /* Stretches it cleanly across the top */
+   width: 100%;
+    height: 15px;       /* Adjust how tall the wave bumps look */
+    object-fit: cover;  /* Stretches it evenly */
     display: block;
 }
 
@@ -868,11 +889,13 @@ i {
 /* Base Price Card Style */
 .price-card {
     background: #ffffff;
-    height:721px;
-    width:411px;
+    height:627px;
+    width:416px;
     text-align: center;
+    font-family: "Poppins", sans-serif;
     border: 1px solid #eee;
-    padding: 10px 10px;
+    padding: 0px 0px;
+    padding-top:40px ;
     box-shadow: 0 10px 30px rgba(0,0,0,0.03);
     display: flex;
     margin-bottom: 100px;
@@ -887,16 +910,21 @@ i {
 /* Highlighted Middle Card (Silver) */
 .price-card.featured {
     background-color: #333369; /* Dark Navy/Purple */
-    color: #ffffff;
+    color: #ffffff!important;
     border: none;
-    height: 750px !important;
+    height: 660px !important;
     z-index: 2;
 }
 
 .price-card h3 {
-    font-size: 1.5rem;
+    font-size: 32px;
+    color: #333369;
     font-weight: 700;
     margin-bottom: 5px;
+}
+
+.price-card.featured h3{
+    color: white;
 }
 
 .package-type {
@@ -906,7 +934,7 @@ i {
 }
 
 .price-card.featured .package-type {
-    color: #ccc;
+    color: #ffffff;
 }
 
 .price {
@@ -924,8 +952,12 @@ i {
 }
 
 .price-card.featured .person {
-    color: #ccc;
+    color: #ffffff;
 }
+
+
+
+
 
 /* Feature List */
 .features {
@@ -944,7 +976,7 @@ i {
 }
 
 .price-card.featured .features li {
-    color: #ddd;
+    color: #ffffff;
     border-bottom: 1px dashed rgba(255,255,255,0.1);
 }
 
@@ -967,17 +999,20 @@ i {
 }
 
 .purchase-btn:hover {
-    background-position: left bottom; /* Make sure this is background-position, not background-color */
+    background-position: left bottom; 
 }
 
 .terms {
-    font-size:21px;
+    font-size:13.6px;
     color: #999;
 }
 
 .price-card.featured .terms {
-    color: #aaa;
+    color: #ffffff;
 }
+
+
+
 
 
 #Expo {
@@ -1857,7 +1892,6 @@ i {
     background-size: cover;
     color: #ffffff;
     font-family: "Poppins",sans-serif;
-    font-weight: bold;
     padding: 90px 20px 70px 20px;
 }
 
@@ -1871,7 +1905,7 @@ i {
 
 .footer-col h3 {
     font-size:21px;
-    font-weight: 700;
+    font-weight: 400;
     margin-bottom: 25px;
     color: #ffffff;
 }
@@ -1879,7 +1913,7 @@ i {
 /* About Column */
 .footer-logo {
     font-size: 1.8rem;
-    font-weight: 700;
+    font-weight: 400;
     color: #f7f7f7;
     margin-bottom: 20px;
     display: flex;
@@ -2028,7 +2062,7 @@ i.icon-arrow-right {
     background-color: #F8669E;
     color: #ffffff;
     border: none;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 0.9rem;
     cursor: pointer;
     transition: opacity 0.3s ease;
