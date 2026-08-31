@@ -514,10 +514,11 @@ html, body {
 
 #schedule{
     height: 1300px;
-    background:linear-gradient(to left, #F7F7F7 50% , transparent 50%);
+    background:linear-gradient(to left, #F7F7F7 45% , transparent 45%);
 }
 
 .schedule-content{
+    width: 1302px;
     display: flex;
     flex-direction: column;
     gap:20px;
@@ -527,7 +528,7 @@ html, body {
     position: relative; 
     margin-bottom: -2px;
     margin-top: -10px;
-    margin-left: 270px;
+    margin-left: 340px;
 }
 
 .schedule-header h5{
@@ -573,7 +574,7 @@ html, body {
     background: #ffffff;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     margin-bottom: 25px;
-    margin-left: 270px;
+    margin-left: 340px;
     margin-top: -1px;
     border-radius: 0px;
     overflow: hidden;
@@ -613,7 +614,7 @@ i {
 /* Middle Details */
 .event-details {
     padding: 30px;
-    flex-grow: 4; 
+    flex-grow: 8; 
 }
 
 .event-details h3 {
@@ -672,6 +673,7 @@ i {
     margin-top: 0px;
     font-family: "Poppins",sans-serif;
 }
+
 
 
 
