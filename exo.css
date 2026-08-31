@@ -686,7 +686,10 @@ i {
     overflow: hidden;
    
 }
-
+.speaker-content{
+    width: 1302px;
+    margin: 0 auto ;
+}
 
 .speaker-sec::before{
     content: "";
@@ -711,9 +714,6 @@ i {
     position: relative;
     z-index: 1;
 }
-
-
-
 
 
 
@@ -791,7 +791,7 @@ i {
     border: none;
     white-space: nowrap;
     box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
-    margin-left: 850px;
+    margin-left: 520px;
     margin-bottom: 100px;
 
     background: linear-gradient(to left, #F8669E 50%, #012d7a 50%);
