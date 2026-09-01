@@ -813,16 +813,18 @@ i {
     margin-bottom:100px;
 }
 
+
+
 .pricing-header {
     position: relative;
     margin-bottom: 60px;
-    margin-left: 280px;
+    margin-left: 0px;
 }
 
 .pricing-header .bg-text {
     position: absolute;
     top: 20%;
-    left: 12.5%;
+    left: 15%;
     transform: translate(-50%, -50%);
     font-size: 7rem;
     font-family: "Inter",sans-serif;
@@ -914,7 +916,7 @@ i {
     background-color: #333369; /* Dark Navy/Purple */
     color: #ffffff!important;
     border: none;
-    height: 660px !important;
+    height: 670px !important;
     z-index: 2;
 }
 
@@ -1015,7 +1017,10 @@ i {
 
 
 
-
+.pricing-content{
+    width: 1302px;
+    margin: 0 auto ;
+}
 
 #Expo {
     position: relative;
