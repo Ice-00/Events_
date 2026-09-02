@@ -208,8 +208,7 @@ html, body {
 
 /* Main section container */
 .join {
-    max-width: 1200px;
-    margin: 200px auto;
+    margin: 150px auto;
     padding: 0 20px;
     background: url(images/testimonial-1.png)no-repeat center center;
     background-size: cover;
@@ -220,34 +219,37 @@ html, body {
 .join-content {
     display: grid;
     height: 650px;
-    width: 1302px;
-    grid-template-columns: 1.2fr 1fr;
+    margin: 0 auto  ;
+    grid-template-columns: 770px 550px;
     align-items: center;
     justify-content: center;
-    gap: 100px;
+    gap: 10px;
 }
 
 /* Left card wrapper layout */
 .cards-wrapper {
     display: flex;
-    gap: 30px;
+    gap: 0px;
     align-items: flex-start;
     margin-left: -120px;
     background: url(images/contentbg.png) no-repeat center center;
-    background-size: 650px auto;
+    background-size: 600px 600px;
+    background-position: 210px center;
+    margin-top: 100px;
 }
 
 .card-col {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
     flex: 1;
+    margin-left: 140px;
 }
 
 /* Staggers the second column down to match the template */
 .card-col.col-2 {
     margin-top: 140px; 
-    margin-left: -10px;
+    margin-left: 20px;
 }
 
 .service-card {
@@ -255,9 +257,9 @@ html, body {
     flex-direction: column;
     justify-content: center;
     background: #ffffff;
-    padding:5px;
-    width: 354px;   /* Change to your desired width */
-    height: 285px;
+    padding:0px;
+    width: 350px;   /* Change to your desired width */
+    height: 270px;
     border: .5px solid #F3F3F3;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
     text-align: center;
@@ -266,15 +268,14 @@ html, body {
 
 /* Proper Pink Icon Box */
 .s-icon {
-    width: 55px;
+   width: 55px;
     height: 55px;
     background-color: #ffffff;
     border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 150px;
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto; /* Centers the icon box properly */
 }
 
 .s-icon img {
@@ -285,6 +286,7 @@ html, body {
 .service-card h3 {
     font-size: 21px;
     font-family: "Inter", sans-serif;
+    font-weight: 600;
     color: #333369;
     margin-bottom: 0px;
     margin-top: 0px;
@@ -304,8 +306,24 @@ html, body {
 }
 
 /* Right side text block styling */
-.join-text {
+.join-content .join-text {
     grid-column: 2;
+    position: relative;
+    margin-left: 35px;
+}
+
+.join-text .j-text {
+    position: relative;
+    top: 130px; 
+    left: 0;
+    font-weight: 300!important;
+    font-family: "Inter" , sans-serif;
+    color: transparent;
+    -webkit-text-stroke: 1px #33336933;
+    z-index: 0;
+    pointer-events: none; 
+    text-transform: capitalize;
+    letter-spacing: 2px;
 }
 
 .join-text h2 {
@@ -324,8 +342,10 @@ html, body {
 .join-text p {
     color: #707070;
     font-size: 16px;
+    font-family: "Poppins",sans-serif;
     line-height: 1.6;
     margin-bottom: 30px;
+    margin-left: 15px;
 }
 
 /* Button style matching the template */
@@ -518,9 +538,11 @@ html, body {
 }
 
 .schedule-content{
-    width: 1302px;
+    width: 1296px;
     display: flex;
+    margin: 0 auto;
     flex-direction: column;
+    padding: 0 auto;
     gap:20px;
 }
 
@@ -528,12 +550,12 @@ html, body {
     position: relative; 
     margin-bottom: -2px;
     margin-top: -10px;
-    margin-left: 340px;
+    margin-left: 360px;
 }
 
 .schedule-header h5{
     color: #F8669E;
-    bottom: -30px;
+    bottom: -40px;
     font-family: "Inter" , sans-serif;
 }
 
@@ -545,7 +567,7 @@ html, body {
 
 .schedule-header .bg-text {
     position: absolute;
-    top: -2px; 
+    top: -20px; 
     left: 0;
     font-weight: 300!important;
     font-family: "Inter" , sans-serif;
@@ -574,7 +596,7 @@ html, body {
     background: #ffffff;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     margin-bottom: 25px;
-    margin-left: 340px;
+    margin-left: 60px;
     margin-top: -1px;
     border-radius: 0px;
     overflow: hidden;
@@ -746,10 +768,10 @@ i {
 
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 2fr);
     gap: 25px;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1320px;
     margin: 0 auto;
     padding: 0 20px;
     margin-bottom: 20px;
@@ -773,6 +795,7 @@ i {
     width: 100%;
     height: auto;
     display: block;
+    object-fit: cover;
     border: none; 
 }
 
@@ -803,6 +826,7 @@ i {
 .view-speaker:hover{
     background-position: left bottom;
 }
+
 
 
 
@@ -958,9 +982,6 @@ i {
 .price-card.featured .person {
     color: #ffffff;
 }
-
-
-
 
 
 /* Feature List */
@@ -1467,7 +1488,7 @@ i {
 }
 
 .partners-content {
-    max-width: 1140px;
+    max-width: 1320px;
     margin: 0 auto;
 }
 
@@ -1608,7 +1629,7 @@ i {
 }
 
 .news-content {
-    max-width: 1140px;
+    max-width: 1320px;
     margin: 0 auto;
 }
 
@@ -1669,11 +1690,10 @@ i {
 .news-grid {
     display: grid;
     height: 462px;
-    width: 1297px;
+    width: 1320px;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    margin-left: -60px;
-    margin-top: 30px;
+   margin: 0 auto ;
 }
 
 .news-card {
