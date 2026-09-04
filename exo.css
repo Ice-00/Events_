@@ -36,13 +36,14 @@ html, body {
     justify-content: space-between;
     gap: 100px;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1320px;
+    flex-wrap: nowrap;
     margin: 0 auto;
-    padding: 20px;
+    padding: 16px;
 }
 
 .logo{
-    left:-60px;
+    margin-left:20px;
 }
 
 
@@ -63,11 +64,10 @@ html, body {
 .nav-bar a {
     text-decoration: none;
     color: #ffffff;
+    font-family: "Poppins",sans-serif;
     font-weight: 600;
 }
-.search-icon{
-    margin-left: -90px;
-}
+
 
 .Buy-ticketbtn{
     display: inline-flex;
@@ -75,9 +75,9 @@ html, body {
     justify-content: center;
     gap: 12px;
     background-color: #F8669E;
-    height: 53px;
+    height: 52px;
     margin-left: 80px;
-    width:142px;
+    width:141px;
     padding: 11px 20px;
     color:#ffffff;
     cursor: pointer;
@@ -98,6 +98,10 @@ html, body {
     background-position: left bottom;
 }
 
+.header-right{
+    margin-left: 100px;
+}
+
 
 /* Hero Wrapper Layout */
 .hero-wrapper {
@@ -113,18 +117,19 @@ html, body {
 .home-content {
     max-width: 800px; 
     margin-top:-100px;
-    margin-left: 40px;
+    margin-left: 5px;
     padding: 0;
 }
 
 .home-content .sub-title {
     color: #F8669E;
-    font-size: 21px;
-    font-family: "Inter";
-    text-transform: uppercase;
+    font-size: 19px;
+    font-family: "Inter",sans-serif;
+    font-weight: 600;
+    text-transform: capitalize;
     letter-spacing: 1.5px;
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 
@@ -154,11 +159,8 @@ html, body {
     margin-left: 0; 
     position: relative;
     margin-top: 54px;
-    
-   
     background: url(images/manbg.png) no-repeat center;
     background-size: contain; 
-    
     min-height: 400px; 
 }
 .hero-image img {
@@ -167,11 +169,10 @@ html, body {
     display: block;
     object-fit: cover;
     margin-bottom: 0px;
-    
-    
     position: relative;
     z-index: 1; 
 }
+
 
 
 .countdown{
@@ -400,7 +401,7 @@ html, body {
 
 .about-sec .ab-text{
     position: absolute;
-    top: 135px; 
+    top: 185px; 
     left: -72;
     font-weight: 400!important;
     font-family: "Inter" , sans-serif;
@@ -425,6 +426,7 @@ html, body {
 .about-text {
     padding: 60px 0; /* No background needed here anymore, the pseudo-element handles it */
     margin-right: 10px;
+    margin-top: 120px;
 }
 
 .about-text h4{
@@ -536,7 +538,7 @@ html, body {
 
 
 #schedule{
-    height: 1500px;
+    height: 1400px;
     background:linear-gradient(to left, #F7F7F7 48.5% , transparent 48.5%);
 }
 
@@ -614,7 +616,7 @@ html, body {
     background-color: #F8669E;
     color: white;
     padding: 40px 30px;
-    width: 300px;
+    width: 350px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -640,20 +642,20 @@ i {
 
 /* Middle Details */
 .event-details {
-    padding: 30px;
-    width: 800px; 
+    padding: 20px;
+    width: 900px; 
 }
 
 .event-details h3 {
     color: #333369;
-    font-size: 1.2rem;
+    font-size: 21px;
     margin-bottom: 10px;
     font-family: "Inter";
 }
 
 .event-details p {
     color: #666;
-    font-size: 0.9rem;
+    font-size: 16px;
     line-height: 1.5;
     font-family: "Poppins" , sans-serif;
     margin-bottom: 15px;
@@ -1066,11 +1068,12 @@ i {
 #Expo::before {
     content: '';
     position: absolute;
+    font-family: "Inter",sans-serif;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(26, 16, 60, 0.095); /* Adjust opacity as needed */
+    background: rgba(44, 43, 83 0.095); /* Adjust opacity as needed */
     z-index: 1;
 }
 #expo-section {
@@ -1081,6 +1084,7 @@ i {
 .expo-header {
     position: relative;
     margin-bottom: 50px;
+    font-family:"Inter",sans-serif;
 }
 
 .expo-header .exp-text {
@@ -1154,7 +1158,7 @@ i {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-self: stretch;
+    
 }
 
 .icon-wrapper {
@@ -1198,9 +1202,10 @@ i {
  color: white;
 }
 
+
 .event-card.small-card .event-details p {
     color: #ffffff; 
-    font-size: 0.85rem;
+    font-size: 16px;
     line-height: 1.4;
     margin: 0;
 }
@@ -1316,7 +1321,7 @@ i {
 
 
 .gallery-grid {
-    max-width: 1301px;
+    max-width: 1320px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1338,7 +1343,7 @@ i {
 
 
 .testimonial-content {
-    max-width: 1306px;
+    max-width: 1320px;
     margin: 0 auto;
 }
 
